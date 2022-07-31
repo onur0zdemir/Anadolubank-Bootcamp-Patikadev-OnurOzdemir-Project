@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- https://www.sqlservercentral.com/articles/postgresql-hibernate-integration -->
+
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://localhost:5330/anadolu-bank-bootcamp-project-database
+        </property>
+        <property name="hibernate.connection.username">anadolubankdbuser</property>
+        <property name="hibernate.connection.password">password</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Print executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Update database on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Annotated entity classes -->
+
+        <mapping class="com.onurozdemir.javabootcamp.project.model.CustomerPolicy"/>
+        <mapping class="com.onurozdemir.javabootcamp.project.model.Customer"/>
+        <mapping class="com.onurozdemir.javabootcamp.project.model.Policy"/>
+        <mapping class="com.onurozdemir.javabootcamp.project.model.InsuranceAgency"/>
+        <mapping class="com.onurozdemir.javabootcamp.project.model.Payment"/>
+
+    </session-factory>
+</hibernate-configuration>
