@@ -2,14 +2,15 @@ package com.onurozdemir.javabootcamp.project.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-//@Data
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity(name = "customer")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
