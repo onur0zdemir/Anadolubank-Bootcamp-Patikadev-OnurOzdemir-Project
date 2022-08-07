@@ -30,11 +30,12 @@ Business intelligence system for insurance company
 ## Technologies
 
   - Java 18
-  - Hibernate 6.1
-  - Maven 3.8.6
-  - PostgreSQL 14
+  - Hibernate 6.1.1
+  - Maven 4.0.0
+  - PostgreSQL 14 v42.4.0
   - pgAdmin 4 v6.1
   - Lombok 1.18.24
+  - JUnit 4.13.2
 
 ## References
 
